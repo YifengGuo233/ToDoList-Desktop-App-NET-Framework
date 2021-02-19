@@ -1,0 +1,39 @@
+﻿<Window x:Class="ToDoList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoList"
+        mc:Ignorable="d"
+        Title="Yifeng Guo's ToDoList" Height="600" Width="950">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+
+        <TabControl HorizontalAlignment="Center" Height="549" Margin="10,10,10,0" VerticalAlignment="Top" Width="922" >
+            <TabItem Header="列表">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,0" HorizontalAlignment="Center" Width="920">
+
+                    <Grid HorizontalAlignment="Left" Height="502" Margin="10,10,0,0" VerticalAlignment="Top" Width="900" Background="#FF952222">
+                        <Label Content="输入代办事件" HorizontalAlignment="Center" Margin="182,10,632,0" VerticalAlignment="Top" Width="86" Height="30"/>
+                        <TextBox HorizontalAlignment="Left"  Margin="310,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="30" TextChanged="TextBox_TextChanged"/>
+                        <Button Content="确定" HorizontalAlignment="Left" Margin="615,453,0,0" VerticalAlignment="Top" Width="275" Click="Button_Click" Height="39"/>
+                    </Grid>
+
+                    <ComboBox x:Name="minute" HorizontalAlignment="Left" Margin="680,184,0,0" VerticalAlignment="Top" Width="60"/>
+                    <ComboBox x:Name="hour" HorizontalAlignment="Left" Margin="602,184,0,0" VerticalAlignment="Top" Width="60"/>
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="查看">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,0" HorizontalAlignment="Center" Width="920">
+                    <ScrollViewer HorizontalAlignment="Left" Height="223" Margin="10,138,0,0" VerticalAlignment="Top" Width="326" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Background="#FFAE4141" >
+                        <StackPanel x:Name="Stack" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="510" RenderTransformOrigin="-0.324,-1.368"/>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
